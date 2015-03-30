@@ -12,42 +12,77 @@
         <title>@title</title>
         <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="@routes.Assets.at("lib/normalize.css/normalize.css")">
-        <link rel="stylesheet" href="@routes.Assets.at("lib/foundation/css/foundation.min.css")">
         <link rel="stylesheet" href="@routes.Assets.at("css/main.min.css")">
         <script src="@routes.Assets.at("lib/modernizr/modernizr.min.js")"></script>
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
     </head>
     <body>
-        <header class="fw-wrapper">
-            <div class="row">
-                <div class="small-12 columns">
-                    <a href="#" class="logo">
-                        @svg.conductrFullColor()
-                    </a>
+        <div class="off-canvas-wrap" data-offcanvas>
+            <div class="inner-wrap">
+                <!-- Off Canvas Menu -->
+                <div class="left-off-canvas-menu">
                     <nav>
-                        <a href="#">Menu Item</a>
-                        <a href="#">Menu Item</a>
+                        <a href="/conductr">Menu Item</a>
+                        <a href="/conductr">Menu Item</a>
                     </nav>
+
+                    <!--TO DO, Christoper can we pull in the TOC Aside here also-->
+                    <aside>
+                      <h3><a href="/conductr">Toc Item One</a></h3>
+                      <h3><a href="/conductr" class="active">Toc Item Two</a></h3>
+                      <ul>
+                        <li><a href="/conductr/install.html">Toc Sub Item One</a></li>
+                        <li><a href="/conductr/quickstart.html">Toc Sub Item Two</a></li>
+                        <li><a href="/conductr/quickstart.html">Toc Sub Item Two</a></li>
+                      </ul>
+                      <h3><a href="/conductr">Toc Item Three</a></h3>
+                      <h3><a href="/conductr">Toc Item Four</a></h3>
+                    </aside>
+                    <!--TO DO, Christoper can we pull in the TOC Aside here also-->
+
+
                 </div>
-            </div>
-        </header>
-        <div class="page-title">
-            <div class="row">
-                <div class="small-12 columns">
-                    <h3>@contextTitle</h3>
+                <header id="site-header" class="fw-wrapper">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <a class="left-off-canvas-toggle" href="#" >Menu</a>
+                            <a href="#" class="logo">
+                                @svg.conductrFullColor()
+                            </a>
+                            <nav>
+                                <a href="#">Menu Item</a>
+                                <a href="#">Menu Item</a>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+                <div class="page-title">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h3>@contextTitle</h3>
+                        </div>
+                    </div>
                 </div>
+                @content
+                <footer id="site-footer" class="fw-wrapper">
+                    <div class="row">
+                        <div class="small-8 columns">
+                            Something else here
+                        </div>
+                        <div class="small-4 columns">
+                            Typesafe Copyright and logo here
+                        </div>
+                    </div>
+                </footer>
+                <!-- close the off-canvas menu -->
+                <a class="exit-off-canvas"></a>
             </div>
         </div>
-        @content
-        <footer class="fw-wrapper">
-            <div class="row">
-                <div class="small-8 columns">
-                    Something else here
-                </div>
-                <div class="small-4 columns">
-                    Typesafe Copyright and logo here
-                </div>
-            </div>
-        </footer>
     </body>
+    <script src="@routes.Assets.at("lib/jquery/jquery.min.js")"></script>
+    <script src="@routes.Assets.at("lib/fastclick/fastclick.js")"></script>
+    <script src="@routes.Assets.at("lib/foundation/js/foundation.min.js")"></script>
+    <script>
+        $(document).foundation();
+    </script>
 </html>
