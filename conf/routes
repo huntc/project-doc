@@ -1,6 +1,6 @@
 
-# Home page
-GET     /conductr$path<.*>          controllers.Application.index(project: Project.Value = Project.ConductR, path)
+GET     /conductr$path<.*>          controllers.Application.render(project: Project.Value = Project.ConductR, path)
 
-# Map static resources from the /public folder to the /assets URL path
+POST    /conductr/events            controllers.Application.update(project: Project.Value = Project.ConductR)
+
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
