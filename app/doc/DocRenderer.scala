@@ -22,7 +22,7 @@ class DocRenderer(githubUri: URI) extends Actor {
       // TODO: This TOC will be generated
       sender() ! Some(index(Html(
         """
-          |<aside class="toc">
+          |<aside>
           |<h3><a href="/conductr">Toc Item One</a></h3>
           |<h3><a href="/conductr" class="active">Toc Item Two</a></h3>
           |<ul>

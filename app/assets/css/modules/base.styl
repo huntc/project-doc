@@ -1,32 +1,3 @@
-.row
-    max-width: site-max-width
-.row .row
-    margin-left: - gutter-width
-    margin-right: - gutter-width
-
-.column,
-.columns
-    padding-left: gutter-width
-    padding-right: gutter-width
-
-@media only screen
-    .column,
-    .columns
-        padding-left: gutter-width
-        padding-right: gutter-width
-
-@media $medium
-    .column,
-    .columns
-        padding-left: gutter-width
-        padding-right: gutter-width
-
-@media $large
-    .column,
-    .columns
-        padding-left: gutter-width
-        padding-right: gutter-width
-
 body
     background: navy
     padding: 0
@@ -112,7 +83,7 @@ body
         h1,h2,h3,h4,p,a
             color: white
 
-body > header
+#site-header
     background: white
     margin: 0px 0 5px 0
     height: 75px
@@ -157,7 +128,7 @@ body > header
                 color: navy
 
 .page-title
-    min-height: 120px
+    min-height: 140px
     padding: 90px 0 20px 0
     h3
         color: white
@@ -170,7 +141,10 @@ body > header
     background: white-ltr
     min-height: 600px
 
-aside.toc
+.left-off-canvas-menu
+    color: white
+
+.in-page-toc
     padding: 20px 20px 20px 40px
     background: linear-gradient(left,0% white-ltr,5% white);
     box-shadow: shadow
@@ -188,5 +162,5 @@ aside.toc
         li
             list-style-type: none
 
-body > footer
+#site-footer
     color: white
