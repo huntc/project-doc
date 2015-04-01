@@ -12,6 +12,7 @@
         <title>@title</title>
         <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="@routes.Assets.at("lib/normalize.css/normalize.css")">
+        <link rel="stylesheet" href="@routes.Assets.at("css/foundation.css")">
         <link rel="stylesheet" href="@routes.Assets.at("css/main.css")">
         <script src="@routes.Assets.at("lib/modernizr/modernizr.js")"></script>
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
@@ -27,11 +28,13 @@
                 <header id="site-header" class="fw-wrapper">
                     <div class="row">
                         <div class="small-12 columns">
-                            <a class="left-off-canvas-toggle" href="#" >Menu</a>
+                            <a class="left-off-canvas-toggle show-for-small-only" href="#" >Menu</a>
                             <a href="#" class="logo">
                                 @conductr.svg.conductrFullColor()
                             </a>
-                            @mainNav()
+                            <nav class="hide-for-small-only">
+                                @mainNav()
+                            </nav>
                         </div>
                     </div>
                 </header>

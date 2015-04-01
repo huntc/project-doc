@@ -85,41 +85,49 @@ body
     box-shadow: 0 0 8px rgba(black,.5)
     &.fw-wrapper
         padding: 0
-    .logo .svg-icon-conductr-logo
-        height: 50px
-        width: 147px
-        margin: 8px 0 0 0
-    ul
+    .logo
+        float: right
+        .svg-icon-conductr-logo
+            height: 50px
+            width: 147px
+            margin: 8px 0 0 0
+    .left-off-canvas-toggle
+        float: left
+    nav
         float: right
         border-right: 1px solid white-dkr
         zoom: 1
-        margin: 0
-        padding: 0
-        li
-            display: inline
-            a
-                display: block
-                float: left
-                height: 70px
-                line-height: 70px
-                padding: 0 30px
-                color: navy
-                border-left: 1px solid white-dkr
-                font-weight: bold
-                font-stretch: condensed
-                letter-spacing: -.03em
-                font-size: 14px
-                transition: all 150ms ease-in-out
-                text-transform: uppercase
-                &:link, &:visited
+        ul
+            margin: 0
+            padding: 0
+            li
+                display: inline
+                a
+                    display: block
+                    float: left
+                    height: 70px
+                    line-height: 70px
+                    padding: 0 30px
                     color: navy
-                &:hover
-                    background: rgba(white-ltr,0.2)
-                    box-shadow: inset 0 4px 0 navy,inset 0 0 1px grey-ltr
+                    border-left: 1px solid white-dkr
+                    font-weight: bold
+                    font-stretch: condensed
+                    letter-spacing: -.03em
+                    font-size: 14px
                     transition: all 150ms ease-in-out
-                    text-decoration: none
-                &:active
-                    color: navy
+                    text-transform: uppercase
+                    &:link, &:visited
+                        color: navy
+                    &:hover
+                        background: rgba(white-ltr,0.2)
+                        box-shadow: inset 0 4px 0 navy,inset 0 0 1px grey-ltr
+                        transition: all 150ms ease-in-out
+                        text-decoration: none
+                    &:active
+                        color: navy
+@media only screen and (min-width: medium)
+    #site-header .logo
+        float: left
 
 .page-title
     min-height: 140px
@@ -180,3 +188,6 @@ body
         .svg-icon
             width: 100px
             height: 30px
+
+.off-canvas-wrap.move-right, .move-right > .inner-wrap
+  height: 100%

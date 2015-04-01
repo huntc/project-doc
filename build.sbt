@@ -28,6 +28,7 @@ routesImport += "controllers.Application.Project"
 // sbt-web
 
 JsEngineKeys.engineType := JsEngineKeys.EngineType.Node
+sassOptions in Assets ++= Seq("--compass", "-r", "compass")
 StylusKeys.useNib in Assets := true
 StylusKeys.compress in Assets := false
 
